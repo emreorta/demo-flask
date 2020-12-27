@@ -6,6 +6,7 @@ pipeline {
             steps {
                 app = docker.build("demo-flask")    
             }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
