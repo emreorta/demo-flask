@@ -1,7 +1,9 @@
 node {
     def app
     stage('Build image') {
-        sh 'docker build -t demo-flask .'
+        sh 'ls'
+        sh 'pwd'
+        sh 'docker build -t demo-flask -f Dockerfile .'
     }
     stage('Deploy') {
         steps {
