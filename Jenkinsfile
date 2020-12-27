@@ -2,11 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
+        stage('Build image') {         
+                app = docker.build("demo-flask")    
+           }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
